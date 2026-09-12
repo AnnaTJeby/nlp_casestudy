@@ -1,0 +1,4 @@
+max_features_setting,actual_vocab_size,train_matrix_shape,test_matrix_shape,train_sparsity_pct,train_nonzero_entries
+40000,40000,"(6400, 40000)","(1600, 40000)",99.77,600241
+5000,5000,"(6400, 5000)","(1600, 5000)",98.43,502470
+1000,1000,"(6400, 1000)","(1600, 1000)",94.8,332525
