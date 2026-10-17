@@ -59,6 +59,8 @@ nlp_casestudy/
 │   ├── 6_imbalance_analysis.ipynb         (Member 6)
 │   ├── 7_model_comparison.ipynb           (Member 7)
 │   └── 8_improvement_experiments.ipynb    (Member 8)
+├── experiments/
+│   └── tfidf_ngram_multitext.py            (separate TF-IDF ablation experiment)
 ├── pyproject.toml / uv.lock            # dependencies (`uv sync`)
 └── README.md
 ```
@@ -66,3 +68,28 @@ nlp_casestudy/
 Note: `6_imbalance_analysis.ipynb` is Colab-specific — it loads Member 5's
 results via a manual `files.upload()` prompt rather than reading from
 `results/` directly.
+
+## Separate TF-IDF + multi-text experiment
+
+The baseline notebooks and their result files remain unchanged. The separate
+experiment compares TF-IDF word n-grams and combined word/character n-grams
+against the saved best baseline:
+
+```bash
+uv run python experiments/tfidf_ngram_multitext.py --mode clean
+```
+
+This writes `results/tfidf_ngram_results.csv` and a CV-only selection table.
+Model and representation selection uses stratified cross-validation on the
+training split; the test split is evaluated only after selection.
+
+To include every available raw text field (for example, headline and article
+body), place `US-Economic-News.csv` in `data/` and run:
+
+```bash
+uv run python experiments/tfidf_ngram_multitext.py --mode multitext
+```
+
+The script reconstructs the original seeded split and refuses to continue if
+its label order differs from the saved baseline split. This prevents an unfair
+comparison caused by evaluating the new representation on different examples.
