@@ -1,0 +1,4 @@
+Experiment,Model,Representation,CV F1,Accuracy,Precision,Recall,F1-Score,TN,FP,FN,TP,Baseline F1,Delta F1,Best Params
+TF-IDF n-grams on shared clean_text,Complement Naive Bayes,word_tfidf_1_2,0.4093804373941892,0.79125,0.41007194244604317,0.4014084507042254,0.40569395017793597,1152,164,170,114,0.4457,-0.040006049822064016,"{""classifier__alpha"": 0.1}"
+TF-IDF n-grams on shared clean_text,Logistic Regression,word_tfidf_1_2,0.4499904280937456,0.766875,0.39172749391727496,0.5669014084507042,0.4633093525179856,1066,250,123,161,0.4457,0.01760935251798562,"{""classifier__C"": 1.0, ""classifier__class_weight"": ""balanced""}"
+TF-IDF n-grams on shared clean_text,LinearSVC,word_tfidf_1_2,0.45163831174926566,0.765,0.38995215311004783,0.573943661971831,0.46438746438746437,1061,255,121,163,0.4457,0.01868746438746438,"{""classifier__C"": 0.1, ""classifier__class_weight"": ""balanced""}"

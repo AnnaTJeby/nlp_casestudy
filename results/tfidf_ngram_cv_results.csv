@@ -1,0 +1,7 @@
+Experiment,Model,Representation,CV F1,Best Params
+TF-IDF n-grams on shared clean_text,Complement Naive Bayes,word_tfidf_1_2,0.4093804373941892,"{""classifier__alpha"": 0.1}"
+TF-IDF n-grams on shared clean_text,Complement Naive Bayes,word_and_char_tfidf,0.3962433522161549,"{""classifier__alpha"": 0.1}"
+TF-IDF n-grams on shared clean_text,Logistic Regression,word_tfidf_1_2,0.4499904280937456,"{""classifier__C"": 1.0, ""classifier__class_weight"": ""balanced""}"
+TF-IDF n-grams on shared clean_text,Logistic Regression,word_and_char_tfidf,0.44805776468207714,"{""classifier__C"": 1.0, ""classifier__class_weight"": ""balanced""}"
+TF-IDF n-grams on shared clean_text,LinearSVC,word_tfidf_1_2,0.45163831174926566,"{""classifier__C"": 0.1, ""classifier__class_weight"": ""balanced""}"
+TF-IDF n-grams on shared clean_text,LinearSVC,word_and_char_tfidf,0.4481875798661684,"{""classifier__C"": 0.1, ""classifier__class_weight"": ""balanced""}"
