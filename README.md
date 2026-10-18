@@ -49,7 +49,11 @@ nlp_casestudy/
 │   ├── member5_linearsvc_results.csv      (Member 5)
 │   ├── model_comparison_results.csv       (Member 7)
 │   ├── improvement_results.csv            (Member 8)
-│   └── improvement_summary.csv            (Member 8)
+│   ├── improvement_summary.csv            (Member 8)
+│   ├── tfidf_ngram_results.csv             (clean-text TF-IDF experiment)
+│   ├── tfidf_ngram_cv_results.csv          (clean-text CV model selection)
+│   ├── tfidf_multitext_results.csv         (headline + body TF-IDF experiment)
+│   └── tfidf_multitext_cv_results.csv      (multi-text CV model selection)
 ├── notebooks/
 │   ├── 1_data_prep_and_split.ipynb        (Member 1)
 │   ├── 2_feature_extraction.ipynb         (Member 2)
@@ -93,3 +97,9 @@ uv run python experiments/tfidf_ngram_multitext.py --mode multitext
 The script reconstructs the original seeded split and refuses to continue if
 its label order differs from the saved baseline split. This prevents an unfair
 comparison caused by evaluating the new representation on different examples.
+
+The dataset contains `headline` and `text`, and the verified multi-text run
+selected combined word/character TF-IDF with balanced Logistic Regression.
+It reached 0.4690 Relevant-class F1, compared with 0.4457 for the best original
+Bag-of-Words baseline. Full metrics are in
+`results/tfidf_multitext_results.csv`.

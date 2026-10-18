@@ -1,0 +1,7 @@
+Experiment,Model,Representation,CV F1,Best Params
+TF-IDF n-grams across all text columns,Complement Naive Bayes,all_text_columns_word_tfidf_1_2,0.40617209023604356,"{""classifier__alpha"": 0.1}"
+TF-IDF n-grams across all text columns,Complement Naive Bayes,all_text_columns_word_and_char_tfidf,0.42404074907399913,"{""classifier__alpha"": 0.1}"
+TF-IDF n-grams across all text columns,Logistic Regression,all_text_columns_word_tfidf_1_2,0.44773698976644927,"{""classifier__C"": 0.1, ""classifier__class_weight"": ""balanced""}"
+TF-IDF n-grams across all text columns,Logistic Regression,all_text_columns_word_and_char_tfidf,0.4551056582830653,"{""classifier__C"": 0.1, ""classifier__class_weight"": ""balanced""}"
+TF-IDF n-grams across all text columns,LinearSVC,all_text_columns_word_tfidf_1_2,0.44803078414348557,"{""classifier__C"": 0.01, ""classifier__class_weight"": ""balanced""}"
+TF-IDF n-grams across all text columns,LinearSVC,all_text_columns_word_and_char_tfidf,0.45510416714250174,"{""classifier__C"": 0.01, ""classifier__class_weight"": ""balanced""}"
